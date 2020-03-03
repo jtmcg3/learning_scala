@@ -59,4 +59,51 @@ val answer = 8 * 5 + 2
 var counter = 0
 // var can be reassigned to 1,2,3..etc but val must always be 42
 
+//Val and Var types are inferred, but you can force a type
+val greeting: String = null
+val greeting: Any = "Hello"
 
+// you can initialize many vals or vars together
+val xmax, ymax = 100 //both xmax and ymax = 100 now
+var greeting, message: String = null 
+
+/*
+Scala has seven numeric types, and these types are CLASSES
+- Byte
+- Char
+- Short
+- Int
+- Long
+- Float
+- Double
+It also has a Boolean type
+
+Because they are classes, you can invoke functions on them, like toCharArray and other above
+*/
+
+1.toString // yields the string "1"
+1.to(10) // Yields Range(1,2,3,4,5,6,7,8,9,10)
+
+// This book is not based on Scala 2.13.0, which is what I'm using,s so some things don't work
+// Luckily, the REPL output is super informative
+// "Hello".intersect("World") becomes "Hello".toSeq.intersect("World").unwrap for some reason
+
+/*
+Arithmetic Operators
+
+Operators in scala are similar to Java and C++, but they are METHODS,
+so a + b works, but it shorthand for a.+(b)
+
+In general, then, a method b is shorthand for any a.method(b)
+1.to(10) becomes 1 to 10
+There are no ++ or -- operators, instead it's like python, += and -=
+
+scala has funcitons in addition to methods, sqrt(), pow(), min(), etc
+but need to be imported with the scala math package
+import scala.math_ , where _ is a wildcard like * in other languages
+you can omit 'scala' from import and function calls
+
+In scala, methods without parameters don't use parentheses
+*/
+
+// The exercises were done in the REPLs
